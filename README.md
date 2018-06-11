@@ -64,7 +64,7 @@
 
 ​	以下提供推荐的WebDav访问工具与方式。
 
-​		Windows、Linux、Android、Brower等环境的WebDav访问。
+​		均有Windows、Linux、Android、Wb Brower、Ihone（商店内）等环境的WebDav访问。
 
 ​	只需要使用对应平台上的某一类可以直接访问WebDav的软件即可，比如WebDrive、Cyberduck 等，更多可以点击查看[MoreSoftWare](https://en.wikipedia.org/wiki/Comparison_of_WebDAV_software)
 
