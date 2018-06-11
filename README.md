@@ -14,7 +14,7 @@
 
 ### 2. 功能介绍
 
-​	当Mpy固件烧写以后，针对BpiBit板子提供了上电时按住A键（35）或B键（34）将启动如下两个特殊模式。
+​	当Mpy固件烧写以后，针对BpiBit板子提供了上电时按住A键或B键将启动如下两个特殊模式。
 
 - #### SmartConfig（B键）
 
@@ -167,7 +167,7 @@ while 0 == RUN.value():
 
 ​	至此提供一个INDEX.PY例子。
 
-```
+```python
 
 
 while True:
@@ -215,6 +215,7 @@ while True:
    1. [USE MICROPYTHON ONLINE](http://www.micropython.org/unicorn)
    2. [MicroPython](http://docs.micropython.org/en/latest/esp8266/)
    3. [StudyPython](http://www.runoob.com/python/python-intro.html)
+   4. [Esp32中文文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
 
 #### Q & A
 
