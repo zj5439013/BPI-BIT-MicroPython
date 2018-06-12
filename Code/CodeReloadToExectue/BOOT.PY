@@ -7,19 +7,25 @@ import _thread
 
 Thread = [ False ]
 
+def GetFileHash():
+	file = open('index.py', "r")
+	code = file.read()
+	file.close()
+	return hash(code) # Get File All
+	# return uos.stat('index.py')[6] # Get File Size
 def thread_check():
-	index_size = uos.stat('index.py')[6]
+	bak = GetFileHash()
 	_thread.start_new_thread(thread_index, ())
 	while(True):
-		size = uos.stat('index.py')[6]
-		if(size != index_size):
-			index_size = size
+		time.sleep(1)
+		tmp = GetFileHash()
+		if(bak != tmp):
+			bak = tmp
 			if(Thread[0]):
 				Thread[0] = False
 				while Thread[0] == False:
 					time.sleep(0.5)
 			_thread.start_new_thread(thread_index, ())
-		time.sleep(1)
 def thread_index():
 	Thread[0] = True
 	file = open('index.py', "r")
@@ -32,6 +38,5 @@ def thread_index():
 	while Thread[0]:
 		pass
 	Thread[0] = True
-	
 if __name__ == "__main__":
 	ThreadFileCheck = _thread.start_new_thread(thread_check, ())
