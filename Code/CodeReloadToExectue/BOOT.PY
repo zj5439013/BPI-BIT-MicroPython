@@ -8,11 +8,11 @@ import _thread
 Thread = [ False ]
 
 def GetFileHash():
+	return uos.stat('index.py')[6] # Get File Size
 	file = open('index.py', "r")
 	code = file.read()
 	file.close()
 	return hash(code) # Get File All
-	# return uos.stat('index.py')[6] # Get File Size
 def thread_check():
 	bak = GetFileHash()
 	_thread.start_new_thread(thread_index, ())
