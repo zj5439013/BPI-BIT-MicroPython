@@ -9,6 +9,7 @@ LED = Pin(18, Pin.OUT) # Set Running Led
 # So You Can Switch Python and WebDAV through external Button to stable execute.
 # Button = Pin(34, Pin.IN)
 # while 0 == Button.value():
+time.sleep(0.2) # Set 0.1s Python execute time.
 LED.value(1)
-time.sleep(0.1) # Set 0.1s Python execute time.
+time.sleep(0.2) # Set 0.1s Python execute time.
 LED.value(0)
