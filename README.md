@@ -8,39 +8,47 @@
 
 ### 1. 固件介绍
 
-​	基于标准MicroPython官方环境适配，无需重新烧写固件，即可在BpiBit编写Python代码直接控制硬件外设，快速的验证与实现你所期望的功能。
+	基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
 
-​	此外移除了串口Python命令行交互，取而代之的是通过WebDav的方式访问或编辑Python代码，WebDav相关工具也已在Tools目录下提供。
+	与官方不同的是，本固件移除了串口 Python 命令行（shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python 代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程。
+
+- [烧写与修复工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash)
+
+- [调试与管理工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)
+
+- [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code)
+
+- [在线网页Py编程](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
 
 ### 2. 功能介绍
 
-​	当Mpy固件烧写以后，针对BpiBit板子提供了上电时按住A键或B键将启动如下两个特殊模式。
+	当Mpy固件烧写以后，针对BpiBit板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
 
 - #### SmartConfig（B键）
 
-	如果是第一次启动，默认上电就会进入该模式，因为没有WIFI配置文件，在该模式下需通过EspTouch软件进行配网，即可连接BpiBit模块，Android版本程序的软件已在Tools目录下提供。
+	如果是第一次启动，默认上电就会进入该模式，因为没有 WIFI 配置文件，在该模式下需通过 EspTouch 或 SmartConfig 软件进行配网，即可连接 BpiBit 模块，Android 版程序的软件已在Tools目录下提供，而 IOS 版本需要自行在 AppStore 里搜索 SmartConfig 即可获得。
 
 - #### SafeMode（A键）
 
-	当python程序的SYSTEM.PY写了死循环后就无法执行WebDav的服务了，所以避免意外情况，允许用户通过按住B键保持WebDav服务的运行直至松开。
+	当 Python 程序的 SYSTEM.PY 写了死循环后就无法执行 WebDAV 的服务了，所以避免意外情况，允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开。
 
 ### 3. 编程环境介绍
 
-​	接下来介绍一下编写Py代码的标准环境以及Bpibit的Python运行环境。
+	接下来介绍一下编写Py代码的标准环境以及 Bpibit 的 Python 运行环境。
 
 #### 标准编程环境
 
-​	第一次使用固件的时候，BpiBit系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。BOOT.PY仅在上电前运行一次，而SYSTEM.PY将会反复循环运行。
+	第一次使用固件的时候，BpiBit系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。BOOT.PY仅在上电前运行一次，而 SYSTEM.PY 将会反复循环运行。
 
-​	SYSTEM.PY文件默认内容为`# This File ill Loop Execute`，而BOOT.PY会有一行注释 `# This file is executed on every boot (including wake-boot from deepsleep)`表示该文件会在上电时执行一次。
+	SYSTEM.PY文件默认内容为 # This File ill Loop Execute，而 BOOT.PY 会有一行注释 # This file is executed on every boot (including wake-boot from deepsleep) 表示该文件会在上电时执行一次。
 
 #### 如何通过SmartConfig获得BpiBit的IP地址？
 
- 1. 启动按住B键即可进入SmartConfig（或第一次启动）
+ 1. 启动按住B键即可进入 SmartConfig （或第一次启动）
 
     串口将输出如下信息在最底部：
 
-    - ​	![SmartConfig](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/SmartConfig.png)
+    - ​	![SmartConfig](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/raw/master/ReadMe/SmartConfig.png)
 
  2. 此处以Android的EspTouch软件为例
 
