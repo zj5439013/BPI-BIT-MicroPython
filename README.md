@@ -1,16 +1,12 @@
 # **BpiBit MicroPython**
 
-
-
 ## **使用说明书**
-
-
 
 ### 1. 固件介绍
 
-	基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
+基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
 
-	与官方不同的是，本固件移除了串口 Python 命令行（shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python 代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程。
+与官方不同的是，本固件移除了串口 Python 命令行（Shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程 。
 
 - [烧写与修复工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash)
 
@@ -22,27 +18,27 @@
 
 ### 2. 功能介绍
 
-	当Mpy固件烧写以后，针对BpiBit板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
+当固件烧写以后，针对 BpiBit 板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
 
-- #### SmartConfig（B键）
+- ### SmartConfig（B键）
 
-	如果是第一次启动，默认上电就会进入该模式，因为没有 WIFI 配置文件，在该模式下需通过 EspTouch 或 SmartConfig 软件进行配网，即可连接 BpiBit 模块，Android 版程序的软件已在Tools目录下提供，而 IOS 版本需要自行在 AppStore 里搜索 SmartConfig 即可获得。
+若是第一次启动固件，则默认上电就会进入该模式，因为没有 WIFI 配置文件无法联网，所以在该模式下需通过 EspTouch 或 SmartConfig 软件进行配网，即可连接 BpiBit 模块，Android 版程序的软件已在本Tools目录下提供，也可以在 Google Store 获取，而 IOS 版本需要自行在 AppStore 里搜索 SmartConfig 获得。
 
-- #### SafeMode（A键）
+- ### Safe Mode（A键）
 
-	当 Python 程序的 SYSTEM.PY 写了死循环后就无法执行 WebDAV 的服务了，所以避免意外情况，允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开。
+当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，所以避免无法上传代码到固件里的特殊意外情况，允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以上传代码文件到其中。
 
 ### 3. 编程环境介绍
 
-	接下来介绍一下编写Py代码的标准环境以及 Bpibit 的 Python 运行环境。
+接下来介绍一下编写 Python 代码的标准环境以及 Bpibit 的 Python 运行环境。
 
 #### 标准编程环境
 
-	第一次使用固件的时候，BpiBit系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。BOOT.PY仅在上电前运行一次，而 SYSTEM.PY 将会反复循环运行。
+第一次使用固件的时候， BpiBit 系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。 BOOT.PY 仅在上电前运行一次，而 SYSTEM.PY 将会反复循环运行。
 
-	SYSTEM.PY文件默认内容为 # This File ill Loop Execute，而 BOOT.PY 会有一行注释 # This file is executed on every boot (including wake-boot from deepsleep) 表示该文件会在上电时执行一次。
+SYSTEM.PY 文件默认内容为 ```# This File ill Loop Execute```，而 BOOT.PY 会有一行注释 ```# This file is executed on every boot (including wake-boot from deepsleep)``` 表示该文件会在上电时执行一次。
 
-#### 如何通过SmartConfig获得BpiBit的IP地址？
+#### 如何通过 SmartConfig 获得 BpiBit的IP地址？
 
  1. 启动按住B键即可进入 SmartConfig （或第一次启动）
 
