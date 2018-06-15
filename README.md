@@ -2,11 +2,11 @@
 
 ## **使用说明书**
 
-### 1. 固件介绍
+### 1. 固件开发介绍
 
-基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
+&emsp;&emsp;基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
 
-与官方不同的是，本固件移除了串口 Python 命令行（Shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程 。
+&emsp;&emsp;与官方不同的是，本固件移除了串口 Python 命令行（Shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程 。
 
 - [烧写与修复工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash)
 
@@ -14,215 +14,93 @@
 
 - [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code)
 
-- [在线网页Py编程](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
+- [浏览器在线编程](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
 
-### 2. 功能介绍
+&emsp;&emsp;接下来将介绍如何在 BpiBit 的 MicroPython 进行开发。
 
-当固件烧写以后，针对 BpiBit 板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
+### 2. 开发环境介绍
 
-- ### SmartConfig（B键）
+#### 1. 尝试烧写一个固件吧
 
-若是第一次启动固件，则默认上电就会进入该模式，因为没有 WIFI 配置文件无法联网，所以在该模式下需通过 EspTouch 或 SmartConfig 软件进行配网，即可连接 BpiBit 模块，Android 版程序的软件已在本Tools目录下提供，也可以在 Google Store 获取，而 IOS 版本需要自行在 AppStore 里搜索 SmartConfig 获得。
+##### 烧写固件教程
 
-- ### Safe Mode（A键）
+&emsp;&emsp;请到此处[烧写固件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash)学习与尝试对应平台的烧写方式，千万别迷路了，要记得回来喔。
 
-当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，所以避免无法上传代码到固件里的特殊意外情况，允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以上传代码文件到其中。
+#### 2. 学会打印调试信息吧
 
-### 3. 编程环境介绍
-
-接下来介绍一下编写 Python 代码的标准环境以及 Bpibit 的 Python 运行环境。
-
-#### 标准编程环境
-
-第一次使用固件的时候， BpiBit 系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。 BOOT.PY 仅在上电前运行一次，而 SYSTEM.PY 将会反复循环运行。
-
-SYSTEM.PY 文件默认内容为 ```# This File ill Loop Execute```，而 BOOT.PY 会有一行注释 ```# This file is executed on every boot (including wake-boot from deepsleep)``` 表示该文件会在上电时执行一次。
-
-#### 如何通过 SmartConfig 获得 BpiBit的IP地址？
-
- 1. 启动按住B键即可进入 SmartConfig （或第一次启动）
-
-    串口将输出如下信息在最底部：
-
-    - ​	![SmartConfig](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/raw/master/ReadMe/SmartConfig.png)
-
- 2. 此处以Android的EspTouch软件为例
-
-    在软件中的对应框输入当前手机所在的WIFI信息，软件将向BpiBit告知该WIFI信息，辅助其连接。
-
-    如下图：
-
-    - ![EspTouchConfig](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/EspTouchConfig.png)
-
- 3. 点击唯一的按钮，稍等一会将会出现下图结果，如果没有就重试。
-
-    - ![EspTouchResult](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/EspTouchResult.png)
-
- 4. 这样就可以知道BpiBit已经连接上WIFI了，并且其IP地址为192.168.1.40，这个值将会提供给访问WebDav空间。
-
-#### 如何连接到BpiBit的WebDav空间？
-
-​	假如已经配网(SmartConfig)成功后得知BpiBit所在网络下的IP后，可以直接访问浏览器查看板子根目录下的所有文件，如下截图。
-
-- ![ListWebDav](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/ListWebDav.png)
-
-​	以下提供推荐的WebDav访问工具与方式。
-
-​		均有Windows、Linux、Android、Wb Brower、Ihone（商店内）等环境的WebDav访问。
-
-​	只需要使用对应平台上的某一类可以直接访问WebDav的软件即可，比如WebDrive、Cyberduck 等，更多可以点击查看[MoreSoftWare](https://en.wikipedia.org/wiki/Comparison_of_WebDAV_software)
-
-​	以WebDrive为例，打开软件后按如下步骤。
-
- 1. 如图点击New
-
-    - ![NewWebDavConnect](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/NewWebDavConnect.png)
-
- 2. 再按如下图选取WebDAV，BpiBit的WebDav使用HTTP。
-
-    - ![SelectWebDAV](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/SelectWebDAV.png)
-
- 3. 此时输入刚才获得的IP地址，例如：192.168.1.40。
-
-    - ![ConnectWebDav](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/ConnectWebDav.png)
-
- 4. 此时即可建立完成，如图，默认即可，建议关闭访问时连接或验证的选项，也就是默认选项，此时软件已经添加了该项，双击打开即可以得到BpiBit的文件目录。
-
-    - ![FinlishWebDav](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/FinlishWebDav.png)
-
- 5. 其他WebDav工具也如上流程所示。
-
-    ​
-
-#### 如何为BpiBit编写Python程序运行？
-
-​	比如说在SYSTEM.PY写入如下代码：
-
-```python
-print("hello bpibit!")
-```
-
-​	则串口将会反复输出以下信息。
-
-- ![HelloBpibit](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/HelloBpibit.png)
-
-​	这就是运行Python的第一步。
-
-#### 更好用的编程环境
-
-​	虽然前面已经可以编写Python并执行了，但这样并不是我真正想要的。
-
-​	因此可将Python环境分为开发环境和生产环境。
-
-- #### 生产环境
-
-	在生产环境下，自己编写的Py代码不会被系统的其他服务打断，也就是在标准编程环境中将SYSTEM.PY写死循环即可，同时WebDav服务将不会被执行，也就无法在Python运行时修改Python代码了。
-
-- #### 开发环境
-
-	在开发环境下，当然是希望编写代码后保存，即时运行程序，最好还可以边写边运行Python程序，以及程序的随时停止和运行，所以提供了本目录下的三个文件，分别为BOOT.PY、SYSTEM.PY、INDEX.PY。
-
-	BOOT.PY 会提供给系统一个线程检查INDEX.PY的文件大小变动的情况从而执行INDEX.PY代码，所以仅需在INDEX.PY文件里直接写代码运行即可（确保文件大小变动即可）。
+##### 1. 查看 BpiBit 的运行情况
 		
-	注意，当在INDEX.PY中写了死循环后，上文中提及的重载文件时将会启动多个线程，因为目前线程库还没有外部停止接口，所以前一个线程的死循环，会与新线程的死循环交错其中，如果你不希望看到信息混乱输出的话，重启一下就好了。
-		
-	代码如下：
+&emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
-```python
-import time
-import _thread
-import sys
-import uos
+&emsp;&emsp;打开串口调试工具，将对应的配置波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，其他软件同理。
 
-def thread_check():
-	index_size = 0
-	while(True):
-		size = uos.stat('index.py')[6]
-		if(size != index_size):
-			print("File Update Now Reload...")
-			_thread.start_new_thread(thread_main, ())
-			index_size = size
-		time.sleep(0.5)
-		
-def thread_main():
-	file = open('index.py', "r")  
-	code = file.read()
-	file.close()  
-	exec(code)
+&emsp;&emsp;在不远的将来将提供浏览器在线调试器。
 
-if __name__ == "__main__":
-	ThreadFileCheck = _thread.start_new_thread(thread_check, ())
-    
-```
+##### 2. 访问 BpiBit 的存储空间
 
-​	除了以上功能，对此还提供了可以控制Py代码的执行或停止的功能，在SYSTEM.PY文件中，通过检测某一个按键（例如：A键）来决定是否执行程序，默认设计成按住A键就执行代码，松开停止执行，返回到代码处继续修改，修改后更新，再按住A键继续执行，当然你也可以反过来，只需要将代码中的`0 == RUN.value()`修改成`1 == RUN.value()`就变成，按住时可以修改Python代码，松开继续执行。
+&emsp;&emsp;可以先到章节 3 的 第二部分学会如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而可以通过WebDAV的形式访问它。
 
-​	其代码如下：
+&emsp;&emsp;那将通过哪些工具访问它？我们将对应提供以下平台的工具供用户访问。
 
-```python
-from machine import Pin
-import time
+&emsp;&emsp;Windows 桌面端
 
-RUN = Pin(35, Pin.IN)
+- [MountainDuck](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/MountainDuck.zip)（免费试用）
+- [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.zip)（免费试用、过期收费、不是问题）
+- [Cyberduck](https://cyberduck.io/)（开源免费、不太好用）
 
-while 0 == RUN.value():
-	time.sleep(0.5)
-```
+&emsp;&emsp;Linux 桌面端
 
-​	至此提供一个INDEX.PY例子。
+- 在 Ubuntu 或 Lubuntu 自带的文件管理器通过`dav://192.168.1.3(BpiBit的IP地址)`的方式即可像文件夹一样访问，其他 Linux 同理。
 
-```python
+&emsp;&emsp;Android 移动端
 
-
-while True:
-	print("Micro Python And WebDav For bpibit")
-
-	#print("Juwan test")
-
-'''
-from machine import Pin
-import time
-
-LED0 = Pin(14, Pin.OUT)
-LED1 = Pin(13, Pin.OUT)
-
-while True:
-	LED0.value(1) # 高电平 亮灯
-	LED1.value(0) # 低电平 熄灯
-	time.sleep(0.1) # 延时休息一下
-	LED0.value(0) # 低电平 熄灯
-	LED1.value(1) # 高电平 亮灯
-	time.sleep(0.1) # 再延时休息一下
-'''
+- [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.apk)
 	
-```
+&emsp;&emsp;Browser 浏览器
 
-​	可以看到，按住时，执行`print`，松开后停止输出。
+- [MpyOnlineEditor](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
+
+&emsp;&emsp;Mac 桌面端
+
+- [MountainDuck](https://mountainduck.io/)
+- [WebDrive](https://webdrive.com/download/)
+
+&emsp;&emsp;IOS 移动端
+- [WebDrive](https://itunes.apple.com/us/app/webdrive/id618167572)
+
+&emsp;&emsp;对应的工具我们也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，我们均已提供名称以及来源。 
+
+- [访问 BitBpi 编辑文件教程]()
+
+&emsp;&emsp;想知道更多使用方法？请到 Tools 目录下查看对应工具的使用说明吧。
+
+##### 3. 可以做什么，不可以做什么？
+
+&emsp;&emsp;有些WebDAV客户端实现存在差异，当你发现有些WebDAV编辑卡死的情况，请不要担心是板子的问题，这类情况多是功能不兼容，但对于我们提供的工具，是允许您直接在内部编辑代码文件的。
+
+&emsp;&emsp;在这样小小板子里，是没有关机的概念的，在访问它内部文件的过程中，请尽量不要突然重启或断电，这极其容易导致内部文件损坏或丢失甚至是无法编辑，如果遇到了这样的情况，请到 [修复固件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash) 查看如何修复它即可。
 
 
+#### 3. 开始你的编程之旅吧
 
-#### 相关教程与学习资料
+请点开 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code) 进行编程吧。
 
-​	以下相关教程与资源可以帮助你在Bpibit上了解和学习Python。
+### 3. 特殊功能介绍*
 
-1. 软件相关应用
-   - 如何用Python验算加密算法
-   - 如何用Python爬取网络数据
-   - 如何用Python自动登陆网站
-2. 硬件相关应用
-   - 播放音乐和变化呼吸灯代码[Juwan的BpiBit自用](https://github.com/yelvlab/BPI-BIT/tree/master/Code/MicroPython/JuwanBit)
-   - 如何使得两灯交错闪缩
-   - 如何使用超声波测距
-   - 如何获取外界温度
-   - 如何控制开关当生物靠近时
-3. 官方文档资料
-   1. [USE MICROPYTHON ONLINE](http://www.micropython.org/unicorn)
-   2. [MicroPython](http://docs.micropython.org/en/latest/esp8266/)
-   3. [StudyPython](http://www.runoob.com/python/python-intro.html)
-   4. [Esp32中文文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
+&emsp;&emsp;当固件烧写以后，针对 BpiBit 板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
 
-#### Q & A
+#### Safe Mode（A键）
 
-​	Q：有问题可以找谁？
+&emsp;&emsp;当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
 
-​	A：@yelvlab and Don‘t @junhuanchen, please. XD.
+#### SmartConfig（B键）
+
+&emsp;&emsp;若是第一次启动固件，则默认就会进入该模式等待配网，因为板子最初没有 WIFI 配置文件所以无法联网。而在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
+
+- [辅助 BitBpi 连接 WIFI 教程]()
+
+### Q & A
+
+​	Q：There is a problem?
+
+​	A：New issue or @me. QQ 741380738 Or WeChat Junhuanchen.
