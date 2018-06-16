@@ -7,7 +7,7 @@
 
 #### Windows
 &emsp;&emsp;连接成功如图，在设备管理器中可以看到此时串口驱动正常且为CON3，所以我们只需要用相关的串口调试助手获取数据即可。
-&emsp;&emsp;![WinCheckCom](README/WinCheckCom.png)
+&emsp;&emsp;![WinCheckCom](ReadMe/WinCheckCom.png)
 &emsp;&emsp;现在打开本目录下提供的工具 WinComDebug.zip ，打开压缩包后直接双击打开 COMdbg.exe ，将出现如下界面，如果出现打不开的情况请更换其他类似串口调试助手。
 &emsp;&emsp;![WinReadCom](README/WinReadCom.png)
 &emsp;&emsp;点击 COM3 的下拉列表的检测会获得其他串口，确保和看到的串口一致即可，接着点击打开后，就会如下图出现数据，前面存在一段乱码是不影响的，主要是看后面输出的信息，如下图所示。
