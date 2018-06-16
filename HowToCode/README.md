@@ -20,7 +20,7 @@
 ```
 &emsp;&emsp;表示该文件会在上电时执行一次。
 
-#### 如何为BpiBit编写Python程序运行？
+#### 如何为 BpiBit 编写 Python 程序运行？
 
 &emsp;&emsp;比如说在SYSTEM.PY写入如下代码：
 
