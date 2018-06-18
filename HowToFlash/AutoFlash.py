@@ -5,13 +5,13 @@ print("Looking for upload port...")
 plist = list(serial.tools.list_ports.comports())
 
 if len(plist) <= 0:
-    print("Serial Not Found!")
+	print("Serial Not Found!")
 else:
-    plist_0 = list(plist[0])
-    serialName = plist_0[0]
-    serialFd = serial.Serial(serialName, 9600, timeout=60)
-    print "Auto-detected:" + serialFd.name
-    serialFd.close()
+	plist_0 = list(plist[len(plist) - 1])
+	serialName = plist_0[0]
+	serialFd = serial.Serial(serialName, 9600, timeout=60)
+	print "Auto-detected:" + serialFd.name
+	serialFd.close()
 	
 FLASH_MODE = "dio"
 FLASH_FREQ = "40m"
