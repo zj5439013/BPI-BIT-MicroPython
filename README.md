@@ -32,7 +32,7 @@
 		
 &emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
-&emsp;&emsp;打开串口调试工具，选取对应的串口并将波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，相关软件同理。
+&emsp;&emsp;到[调试与管理工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)中获取并打开串口调试工具，选取对应的串口并将波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，相关软件同理。
 
 &emsp;&emsp;在不远的将来将提供浏览器在线调试器。
 
