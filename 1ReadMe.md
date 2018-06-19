@@ -32,7 +32,7 @@
 		
 &emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
-&emsp;&emsp;到[调试与管理工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)中获取并打开串口调试工具，选取对应的串口并将波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，相关软件同理。
+&emsp;&emsp;到[获取 BitBpi 默认串口输出的信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)中获取并打开串口调试工具，选取对应的串口并将波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，相关软件同理。
 
 &emsp;&emsp;在不远的将来将提供浏览器在线调试器。
 
@@ -70,7 +70,7 @@
 
 &emsp;&emsp;对应的工具我们也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，我们均已提供工具名称以及来源。 
 
-- [访问 BitBpi 编辑文件教程]()
+- [访问 BitBpi 编辑文件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)
 
 &emsp;&emsp;想知道更多使用方法？请到 Tools 目录下查看对应工具的使用说明吧。
 
@@ -83,21 +83,21 @@
 
 #### 3. 开始你的编程之旅吧
 
-请点开 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code) 进行编程吧。
+是时候到 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code) 学习编程了。
 
 ### 3. 特殊功能介绍*
 
 &emsp;&emsp;当固件烧写以后，针对 BpiBit 板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
 
-#### Safe Mode（A键）
-
-&emsp;&emsp;当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
-
-#### SmartConfig（B键）
+#### SmartConfig（A键）
 
 &emsp;&emsp;若是第一次启动固件，则默认就会进入该模式等待配网，因为板子最初没有 WIFI 配置文件所以无法联网。而在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
 
-- [辅助 BitBpi 连接 WIFI 教程]()
+- 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)后即可访问文件。
+
+#### Safe Mode（B键）
+
+&emsp;&emsp;当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
 
 ### Q & A
 
