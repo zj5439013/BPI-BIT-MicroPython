@@ -2,6 +2,8 @@
 
 ## **使用说明书**
 
+[TOC]
+
 ### 1. 固件开发介绍
 
 &emsp;&emsp;基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
@@ -32,40 +34,40 @@
 		
 &emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
-&emsp;&emsp;到[获取 BitBpi 默认串口输出的信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)中获取并打开串口调试工具，选取对应的串口并将波特率设置为 115200 其他的默认就可以了，使用方法可以到Tools下查看图示或到此处学习[串口调试助手怎么用](https://jingyan.baidu.com/article/6079ad0e915b8a28fe86db4b.html)，相关软件同理。
+&emsp;&emsp;到此处查看[获取 BitBpi 串口输出信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)章节中学习如何使用串口调试工具，相关软件同理。
 
-&emsp;&emsp;在不远的将来将提供浏览器在线调试器。
+&emsp;&emsp;在不远的未来将提供浏览器在线调试器。
 
 ##### 2. 访问 BpiBit 的存储空间
 
-&emsp;&emsp;可以先到章节 3 的 第二部分学会如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而可以通过WebDAV的形式访问它。
+&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
 
-&emsp;&emsp;那将通过哪些工具访问它？我们将对应提供以下平台的工具供用户访问。
+&emsp;&emsp;那将通过哪些工具访问它？我们提供了以下平台的工具供用户选择访问文件。
 
-&emsp;&emsp;Windows 桌面端
+###### Windows
 
 - [MountainDuck](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/MountainDuck.zip)（免费试用）
 - [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.zip)（免费试用、过期收费、不是问题）
 - [Cyberduck](https://cyberduck.io/)（开源免费、不太好用）
 
-&emsp;&emsp;Linux 桌面端
+###### Linux
 
 - 在 Ubuntu 或 Lubuntu 自带的文件管理器通过`dav://192.168.1.3(BpiBit的IP地址)`的方式即可像文件夹一样访问，其他 Linux 同理。
 
-&emsp;&emsp;Android 移动端
+###### Android
 
 - [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.apk)
 	
-&emsp;&emsp;Browser 浏览器
+###### Browser
 
 - [MpyOnlineEditor](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
 
-&emsp;&emsp;Mac 桌面端
+###### Mac
 
 - [MountainDuck](https://mountainduck.io/)
 - [WebDrive](https://webdrive.com/download/)
 
-&emsp;&emsp;IOS 移动端
+###### IOS
 - [WebDrive](https://itunes.apple.com/us/app/webdrive/id618167572)
 
 &emsp;&emsp;对应的工具我们也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，我们均已提供工具名称以及来源。 

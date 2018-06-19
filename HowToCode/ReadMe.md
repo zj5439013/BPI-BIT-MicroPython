@@ -70,7 +70,7 @@ print("hello bpibit!")
    
 2. 硬件相关应用
 
-   - 播放音乐和变化呼吸灯代码[Juwan的BpiBit自用](https://github.com/yelvlab/BPI-BIT/tree/master/Code/MicroPython/JuwanBit)
+   - 播放音乐和变化呼吸灯代码
    - 如何使得两灯交错闪缩
    - 如何使用超声波测距
    - 如何获取外界温度

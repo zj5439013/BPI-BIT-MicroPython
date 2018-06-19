@@ -1,8 +1,8 @@
 # **BpiBit MicroPython**
 
-[TOC]
-
 ## **各类工具使用方法**
+
+[TOC]
 
 ### 1. 获取 BitBpi 串口输出信息
 
@@ -159,3 +159,9 @@
 
 &emsp;&emsp;在这之前你需要先掌握 Windows 或 Linux 下的访问方式。
 &emsp;&emsp;[浏览器在线编程](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
+
+### 4. 编写 BitBpi 中的代码工具
+
+&emsp;&emsp;Windows随意，而Linux下不建议用gedit，推荐使用网页在线编辑的软固件。
+&emsp;&emsp;但凡编写代码文件保存时卡死了，多数是文件管理工具没有缓存导致的，这时候你需要将代码文件带到外边编辑并保存，然后再移动回文件夹中覆盖文件。
+&emsp;&emsp;反正我提供的在线编辑器没有这种问题XD。
