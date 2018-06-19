@@ -46,7 +46,7 @@ sudo esptool.py --chip esp32 --port COM3 --baud 1152000 write_flash -z --flash_m
 
 - 烧写之后，如果烧写成功会如下图，否则会闪退或出现红色警告内容。
 
-- ![FlashFinish](README/FlashFinish.jpg)
+- ![FlashFinish](ReadMe/FlashFinish.jpg)
 
 - 烧写成功以后请到 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code) 下获取对应的 Python 开发示例代码。
 
@@ -60,7 +60,7 @@ sudo esptool.py --chip esp32 --port COM3 --baud 1152000 write_flash -z --flash_m
 
 - 修复工具执行成功之后结果的如下图。
 
-- ![RepairFinish](README/RepairFinish.jpg)
+- ![RepairFinish](ReadMe/RepairFinish.jpg)
 
 # 疑难解答
 
