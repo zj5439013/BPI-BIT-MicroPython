@@ -34,13 +34,13 @@
 		
 &emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
-&emsp;&emsp;到此处查看[获取 BitBpi 串口输出信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)章节中学习如何使用串口调试工具，相关软件同理。
+&emsp;&emsp;到此处查看[获取 BitBpi 串口输出信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#1-获取-bitbpi-串口输出信息)章节中学习如何使用串口调试工具，相关软件同理。
 
 &emsp;&emsp;在不远的未来将提供浏览器在线调试器。
 
 ##### 2. 访问 BpiBit 的存储空间
 
-&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
+&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#辅助-BitBpi-连接附近WIFI)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
 
 &emsp;&emsp;那将通过哪些工具访问它？我们提供了以下平台的工具供用户选择访问文件。
 
@@ -72,7 +72,7 @@
 
 &emsp;&emsp;对应的工具我们也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，我们均已提供工具名称以及来源。 
 
-- [访问 BitBpi 编辑文件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)
+- [访问 BitBpi 编辑文件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#3-访问-bitbpi-编辑文件教程)
 
 &emsp;&emsp;想知道更多使用方法？请到 Tools 目录下查看对应工具的使用说明吧。
 
@@ -80,7 +80,7 @@
 
 &emsp;&emsp;有些WebDAV客户端实现存在差异，当你发现有些WebDAV编辑卡死的情况，请不要担心是板子的问题，这类情况多是WebDAV协议处理不兼容，但对于我们提供的工具，是允许您直接在内部任意编辑的。
 
-&emsp;&emsp;在这样小小板子里，是没有关机的概念的，在访问它内部文件的过程中，请尽量不要突然重启或断电，这极其容易导致内部文件损坏或丢失甚至是无法编辑，如果遇到了这样的情况，请到 [修复固件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash) 查看如何修复它即可。
+&emsp;&emsp;在这样小小板子里，是没有关机的概念的，在访问它内部文件的过程中，请尽量不要突然重启或断电，这极其容易导致内部文件损坏或丢失甚至是无法编辑，如果遇到了这样的情况，请到 [修复固件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash#出现问题) 查看如何修复它即可。
 
 
 #### 3. 开始你的编程之旅吧
@@ -95,7 +95,7 @@
 
 &emsp;&emsp;开机期间前5秒多按几次 A键 后将进入该模式，在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
 
-- 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)后即可访问文件。
+- 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#辅助-BitBpi-连接附近WIFI)后即可访问文件。
 
 #### Safe Mode（B键）
 
