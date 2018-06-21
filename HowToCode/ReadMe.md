@@ -4,25 +4,29 @@
 
 ### 1. 编程环境介绍
 
-&emsp;&emsp;由宇宙第一帅气的我来为大家介绍一下编写 Python 代码的标准环境以及 Bpibit 的 Python 运行环境。
+&emsp;&emsp;由宇宙第一帅气的我来为大家介绍一下 Bpibit 的 Python 运行环境。
 
 #### 标准编程环境
 
-&emsp;&emsp;第一次使用固件的时候， BpiBit 系统会默认生成两个文件，分别为 BOOT.PY 与 SYSTEM.PY。 BOOT.PY 仅在上电前运行一次，而 SYSTEM.PY 将会反复循环运行。
+&emsp;&emsp;第一次使用固件的时候， BpiBit 系统会默认生成两个文件，分别为 boot.py 与 system.py 。 boot.py 仅在上电前运行一次，而 system.py 将会反复循环运行。
 
-&emsp;&emsp;SYSTEM.PY 文件默认内容为 
+&emsp;&emsp;system.py 文件默认内容为 
 ```python 
-# This File ill Loop Execute
+# This file is executed on every boot (including wake-boot from deepsleep)
+#import esp
+#esp.osdebug(None)
+#import webrepl
+#webrepl.start()
 ```
-&emsp;&emsp;而 BOOT.PY 会有一行注释 
+&emsp;&emsp;而 boot.py 会有一行注释 
 ``` python
 # This file is executed on every boot (including wake-boot from deepsleep)
 ```
-&emsp;&emsp;表示该文件会在上电时执行一次。
+&emsp;&emsp;意思就是该文件会在上电时执行一次。
 
 #### 如何为 BpiBit 编写 Python 程序运行？
 
-&emsp;&emsp;比如说在SYSTEM.PY写入如下代码：
+&emsp;&emsp;比如说在 system.py 写入如下代码：
 
 ```python
 print("hello bpibit!")
@@ -30,9 +34,9 @@ print("hello bpibit!")
 
 &emsp;&emsp;则串口将会反复输出以下信息。
 
-- ![HelloBpibit](https://github.com/yelvlab/BPI-BIT/raw/master/Code/MicroPython/ReadMe/HelloBpibit.png)
+- ![HelloBpibit](ReadMe/HelloBpibit.png)
 
-&emsp;&emsp;这就是运行Python的第一步。
+&emsp;&emsp;这就是运行Python的第一步，完成了。
 
 #### 更好用的编程环境
 
@@ -42,19 +46,19 @@ print("hello bpibit!")
 
 - #### 生产环境
 
-	&emsp;&emsp;在生产环境下，自己编写的Py代码不会被系统的其他服务打断，也就是在标准编程环境中将SYSTEM.PY写死循环即可，同时WebDav服务将不会被执行，也就无法在Python运行时修改Python代码了。
+&emsp;&emsp;在生产环境下，自己编写的Py代码不会被系统的其他服务打断，也就是在标准编程环境中将 system.py 写死循环即可，同时WebDav服务将不会被执行，也就无法在Python运行时修改Python代码了。
 
 - #### 开发环境
 
-	&emsp;&emsp;在开发环境下，当然是希望编写代码后保存，即时运行程序，最好还可以边写边运行Python程序，以及程序的随时停止和运行，所以提供了本目录下的三个文件，分别为BOOT.PY、SYSTEM.PY、INDEX.PY。
+	&emsp;&emsp;在开发环境下，当然是希望编写代码后保存，即时运行程序，最好还可以边写边运行Python程序，以及程序的随时停止和运行，所以提供了本目录下的三个文件，分别为boot.py、system.py、index.py。
 
-	&emsp;&emsp;BOOT.PY 会提供给系统一个线程检查INDEX.PY的文件变动的情况从而执行INDEX.PY代码，所以仅需在INDEX.PY文件里直接写代码运行即可。
+	&emsp;&emsp;boot.py 会提供给系统一个线程检查 index.py 的文件变动的情况从而执行 index.py 代码，所以仅需在 index.py 文件里直接写代码运行即可。
 		
 	代码在[CodeReloadToExectue](CodeReloadToExectue)
 
-&emsp;&emsp;除了以上功能，对此还提供了可以控制Py代码的执行或停止的功能，在SYSTEM.PY文件中，通过检测某一个按键（例如：A键）来决定是否执行程序，默认设计成按住A键就执行代码，松开停止执行，返回到代码处继续修改，修改后更新，再按住A键继续执行，当然你也可以反过来，只需要将代码中的`0 == RUN.value()`修改成`1 == RUN.value()`就变成，按住时可以修改Python代码，松开继续执行。
+&emsp;&emsp;除了以上功能，对此还提供了可以控制Py代码的执行或停止的功能，在system.py文件中，通过检测某一个按键（例如：A键）来决定是否执行程序，默认设计成按住A键就执行代码，松开停止执行，返回到代码处继续修改，修改后更新，再按住A键继续执行，当然你也可以反过来，只需要将代码中的`0 == RUN.value()`修改成`1 == RUN.value()`就变成，按住时可以修改Python代码，松开继续执行。
 
-&emsp;&emsp;代码在[SYSTEM.PY](CodeReloadToExectue/SYSTEM.PY)
+&emsp;&emsp;代码在[system.py](CodeReloadToExectue/system.py)
 
 &emsp;&emsp;可以看到，当按住 A键 时，执行`print`，松开后停止输出。
 
