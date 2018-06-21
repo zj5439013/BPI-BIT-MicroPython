@@ -89,17 +89,17 @@
 
 ### 3. 特殊功能介绍*
 
-&emsp;&emsp;当固件烧写以后，针对 BpiBit 板子提供了上电时按住 A键 或 B键 将启动如下两个特殊模式。
+&emsp;&emsp;当固件烧写以后，针对 BpiBit 板子提供了如下两个特殊模式。
 
 #### SmartConfig（A键）
 
-&emsp;&emsp;若是第一次启动固件，则默认就会进入该模式等待配网，因为板子最初没有 WIFI 配置文件所以无法联网。而在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
+&emsp;&emsp;开机期间前5秒多按几次 A键 后将进入该模式，在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
 
 - 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)后即可访问文件。
 
 #### Safe Mode（B键）
 
-&emsp;&emsp;当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
+&emsp;&emsp;开机期间前5秒多按几次 B键 后松开将进入该模式，再按一次即可退出该模式，当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
 
 ### Q & A
 
