@@ -36,7 +36,7 @@ print("hello bpibit!")
 
 - ![HelloBpibit](ReadMe/HelloBpibit.png)
 
-&emsp;&emsp;这就是运行Python的第一步，完成了。
+&emsp;&emsp;这就是运行Python的第一步，我们已经成功了一大半。
 
 #### 更好用的编程环境
 
@@ -46,43 +46,35 @@ print("hello bpibit!")
 
 - #### 生产环境
 
-&emsp;&emsp;在生产环境下，自己编写的Py代码不会被系统的其他服务打断，也就是在标准编程环境中将 system.py 写死循环即可，同时WebDav服务将不会被执行，也就无法在Python运行时修改Python代码了。
+&emsp;&emsp;在生产环境下，自己编写的Py代码不会被系统的其他服务打断，也就是在标准编程环境中将 system.py 写死循环即可，同时WebDav服务将不会被执行，也就无法在Python运行时修改Python代码了，这在要求执行时序稳定的情况下十分有用。
 
 - #### 开发环境
 
-	&emsp;&emsp;在开发环境下，当然是希望编写代码后保存，即时运行程序，最好还可以边写边运行Python程序，以及程序的随时停止和运行，所以提供了本目录下的三个文件，分别为boot.py、system.py、index.py。
-
-	&emsp;&emsp;boot.py 会提供给系统一个线程检查 index.py 的文件变动的情况从而执行 index.py 代码，所以仅需在 index.py 文件里直接写代码运行即可。
-		
-	代码在[CodeReloadToExectue](CodeReloadToExectue)
-
-&emsp;&emsp;除了以上功能，对此还提供了可以控制Py代码的执行或停止的功能，在system.py文件中，通过检测某一个按键（例如：A键）来决定是否执行程序，默认设计成按住A键就执行代码，松开停止执行，返回到代码处继续修改，修改后更新，再按住A键继续执行，当然你也可以反过来，只需要将代码中的`0 == RUN.value()`修改成`1 == RUN.value()`就变成，按住时可以修改Python代码，松开继续执行。
-
-&emsp;&emsp;代码在[system.py](CodeReloadToExectue/system.py)
-
-&emsp;&emsp;可以看到，当按住 A键 时，执行`print`，松开后停止输出。
+&emsp;&emsp;在开发环境下，当然是希望编写代码保存后即刻生效，最好还可以控制程序的时序和随时停止或运行，所以在目录下的[CodeReloadToExectue](CodeReloadToExectue)分别提供了为boot.py、system.py、index.py文件，将其覆盖至固件当中，只需编写index.py代码文件即可，更多信息可以参阅目录下的ReadMe.md。
 
 #### 相关案例与学习资料
 
 &emsp;&emsp;以下相关教程与资源可以帮助你在Bpibit上了解和学习Python。
 
-1. 软件相关应用
+1. 官方文档资料
 
-   - 如何用Python验算加密算法
-   - 如何用Python爬取网络数据
-   - 如何用Python自动登陆网站
-   
+   1. [MicroPython Use Online](http://www.micropython.org/unicorn)
+   2. [MicroPython Documents](http://docs.micropython.org/en/latest/esp8266/)
+   3. [StudyPython ZeroBased](http://www.runoob.com/python/python-intro.html)
+   4. [Esp32 中文开发文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
+
 2. 硬件相关应用
 
+   - 产品硬件测试流程代码
    - 播放音乐和变化呼吸灯代码
    - 如何使得两灯交错闪缩
    - 如何使用超声波测距
    - 如何获取外界温度
    - 如何控制开关当生物靠近时
 
-3. 官方文档资料
+3. 软件相关应用
 
-   1. [USE MICROPYTHON ONLINE](http://www.micropython.org/unicorn)
-   2. [MicroPython](http://docs.micropython.org/en/latest/esp8266/)
-   3. [StudyPython](http://www.runoob.com/python/python-intro.html)
-   4. [Esp32中文文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
+   - 如何用Python验算加密算法
+   - 如何用Python爬取网络数据
+   - 如何用Python自动登陆网站
+   
