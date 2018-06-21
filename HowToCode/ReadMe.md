@@ -4,7 +4,7 @@
 
 ### 1. 编程环境介绍
 
-&emsp;&emsp;接下来介绍一下编写 Python 代码的标准环境以及 Bpibit 的 Python 运行环境。
+&emsp;&emsp;由宇宙第一帅气的我来为大家介绍一下编写 Python 代码的标准环境以及 Bpibit 的 Python 运行环境。
 
 #### 标准编程环境
 
