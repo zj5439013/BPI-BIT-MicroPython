@@ -40,7 +40,7 @@
 
 ##### 2. 访问 BpiBit 的存储空间
 
-&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#辅助-BitBpi-连接附近WIFI)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
+&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-BitBpi-连接附近WIFI)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
 
 &emsp;&emsp;那将通过哪些工具访问它？我们提供了以下平台的工具供用户选择访问文件。
 
@@ -95,7 +95,7 @@
 
 &emsp;&emsp;开机期间前5秒多按几次 A键 后将进入该模式，在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
 
-- 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#辅助-BitBpi-连接附近WIFI)后即可访问文件。
+- 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-BitBpi-连接附近WIFI)后即可访问文件。
 
 #### Safe Mode（B键）
 
