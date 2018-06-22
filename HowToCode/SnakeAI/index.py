@@ -63,5 +63,5 @@ if __name__ == "__main__":
 	Test = SnakeMap()
 	for i in range(50):
 		if(False == Test.Run()):
-			break;
+			break
 	
