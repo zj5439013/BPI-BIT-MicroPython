@@ -14,7 +14,7 @@
 
 - [调试与管理工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools)
 
-- [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code)
+- [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToCode)
 
 - [浏览器在线编程](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
 
@@ -85,7 +85,7 @@
 
 #### 3. 开始你的编程之旅吧
 
-是时候到 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Code) 学习编程了。
+是时候到 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToCode) 学习编程了。
 
 ### 3. 特殊功能介绍*
 
