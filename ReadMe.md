@@ -8,7 +8,7 @@
 
 &emsp;&emsp;基于标准 MicroPython 官方环境适配，无需重新烧写固件，即可在 BpiBit 编写 Python 代码直接控制硬件外设，快速的验证与实现你所期望的功能。
 
-&emsp;&emsp;与官方不同的是，本固件移除了串口 Python 命令行（Shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程 。
+&emsp;&emsp;与官方不同的是，本固件移除了串口 Python 命令行（Shell）交互，取而代之的是通过 WebDAV 的方式访问或开发 Python代码，并在本目录下提供如下列表功能，此外还提供软固件扩充功能，以支持浏览器网页端在线编程。
 
 - [烧写与修复工具](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash)
 
@@ -32,7 +32,9 @@
 
 ##### 1. 查看 BpiBit 的运行情况
 		
-&emsp;&emsp;我们将通过任意一种串口调试工具即可查看其输出的工作信息。
+&emsp;&emsp;将板子上电后一会可以发现它会滚动显示四个字符，和 板子的 MAC 地址后两个字节相关，假设板子显示为`88C2`，那么板子默认会自动连接名称为 bit88c2 的 WIFI AP 热点，在没有 WIFI 热点的时候，它也会建立一个热点，名称为 bit88c2 的热点，这个值将会给板子用作标识、访问的功能用途。
+
+&emsp;&emsp;接着我们将通过任意一种串口调试工具即可查看其输出的工作信息。
 
 &emsp;&emsp;到此处查看[获取 BitBpi 串口输出信息](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#1-获取-bitbpi-串口输出信息)章节中学习如何使用串口调试工具，相关软件同理。
 
