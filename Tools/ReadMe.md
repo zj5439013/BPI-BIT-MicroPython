@@ -77,23 +77,11 @@
 
 ### 3. 访问 BitBpi 编辑文件教程
 
-&emsp;&emsp;在进行文件管理前你需得到板子的IP，就在刚才我已经得到 IP: 192.168.1.14 了，就可以尝试访问板子的内部空间了。
+&emsp;&emsp;如果已经得知板子的IP，例如就在刚才我已经得到 IP: 192.168.1.14 了，就可以尝试访问板子的内部空间了。
+
+&emsp;&emsp;提示：目前板子会在上电的时候输出4个十六进制数值，比如：92C2 ，这个可以可以用来代替 IP 访问板子空间，或与他人区分板子，此时访问的地址可以是域名 `http://bit92c2.local`，从而取代 IP 地址进行访问WebDAV，方便更换的连接WIFI-AP的时候不需要再新建客户端链接配置，同时也可以和其他小伙伴一起使用不受影响。
 
 #### Windows
-
-&emsp;&emsp;以 Mountain Duck 为例，打开软件界面如下。
-
-- &emsp;&emsp;![WinWebDavDefault](ReadMe/WinWebDavDefault.png)
-
-&emsp;&emsp;由于我们板子的 WebDAV 是使用HTTP协议且允许匿名进行访问，也就是无用户认证，所以需要修改如下图。
-
-- &emsp;&emsp;![WinWebDavSetting](ReadMe/WinWebDavSetting.png)
-
-&emsp;&emsp;选择 WebDAV(HTTP) 项后填入我们板子的IP，其中的 Anonymous 指匿名，可有可无不影响，可以按下 Connect 尝试连接，成功了会弹出文件夹，如果不成功就会弹出 Try Again ，重试它直到成功即可。（如果你还没开始编程的情况下）
-
-- &emsp;&emsp;![WinWebDavFinlish](ReadMe/WinWebDavFinlish.png)
-
-&emsp;&emsp;然后你就可以开始编程啦。
 
 &emsp;&emsp;以 WebDrive 为例，打开软件界面如下。
 
@@ -114,6 +102,20 @@
 &emsp;&emsp;鼠标双击出现的IP地址，等待连接成功后会直接弹出文件夹。
 
 - &emsp;&emsp;![WinWebDriveFinlish](ReadMe/WinWebDriveFinlish.png)
+
+&emsp;&emsp;然后你就可以开始编程啦。
+
+&emsp;&emsp;以 Mountain Duck 为例，打开软件界面如下。
+
+- &emsp;&emsp;![WinWebDavDefault](ReadMe/WinWebDavDefault.png)
+
+&emsp;&emsp;由于我们板子的 WebDAV 是使用HTTP协议且允许匿名进行访问，也就是无用户认证，所以需要修改如下图。
+
+- &emsp;&emsp;![WinWebDavSetting](ReadMe/WinWebDavSetting.png)
+
+&emsp;&emsp;选择 WebDAV(HTTP) 项后填入我们板子的IP，其中的 Anonymous 指匿名，可有可无不影响，可以按下 Connect 尝试连接，成功了会弹出文件夹，如果不成功就会弹出 Try Again ，重试它直到成功即可。（如果你还没开始编程的情况下）
+
+- &emsp;&emsp;![WinWebDavFinlish](ReadMe/WinWebDavFinlish.png)
 
 &emsp;&emsp;然后你又可以开始编程啦。
 

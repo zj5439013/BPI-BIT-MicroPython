@@ -40,7 +40,7 @@
 
 ##### 2. 访问 BpiBit 的存储空间
 
-&emsp;&emsp;若是未配网过的板子可以在板子启动前按住一会按键A后松开此时进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-bitbpi-连接附近wifi)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
+&emsp;&emsp;若是未配网过的板子可以在板子启动前多按几次按键 A 后即可进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-bitbpi-连接附近wifi)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
 
 &emsp;&emsp;那将通过哪些工具访问它？我们提供了以下平台的工具供用户选择访问文件。
 
