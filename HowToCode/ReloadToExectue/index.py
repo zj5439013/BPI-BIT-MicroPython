@@ -1,3 +1,4 @@
+import sys
 
 while Thread[0]: # Replace while True:
-	print("Hello bpibit")
+	exec(sys.stdin.readline()) # repl input and exec python code

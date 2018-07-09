@@ -62,9 +62,11 @@ print("hello bpibit!")
       在线使用 MicroPython 编程环境。
    2. ###### [MicroPython Documents](http://docs.micropython.org/en/latest/esp8266/)
       官方英文 MicroPython 开发文档。
-   3. ###### [StudyPython ZeroBased](http://www.runoob.com/python/python-intro.html)
+   3. ###### [MicroPython Documents](https://dfrobot.gitbooks.io/upycraft_cn/content/)
+      官方中文 MicroPython 开发文档（非ESP32文档）。
+   4. ###### [StudyPython ZeroBased](http://www.runoob.com/python/python-intro.html)
       零基础学习 Python 语言编程。
-   4. ###### [Esp32 中文开发文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
+   5. ###### [Esp32 中文开发文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
       国内翻译的 MicroPython 开发文档。
 
 ##### 2. 硬件相关应用
