@@ -37,6 +37,8 @@
 
 ### 2. 辅助 BitBpi 连接附近WIFI
 
+&emsp;&emsp;先进入该模式[SmartConfig（A键）](https://github.com/junhuanchen/BPI-BIT-MpyDevelop#smartconfiga%E9%94%AE)后等待配网。
+
 #### Android
 
 &emsp;&emsp;当我们第一次使用 BpiBit 板子或想更换板子连接的 WIFI 的时候，会在串口调试助手里看到如下图的内容，有关于 SmartConfig 配置的功能，其中 smartconfig: SC_STATUS_FINDING_CHANNEL 表示 SmartConfig 正在等待配网。
