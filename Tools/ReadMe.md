@@ -9,7 +9,7 @@
 &emsp;&emsp;在这之前请将 BpiBit 板子接入电脑，并确认存在串口驱动。
 
 #### Windows
-&emsp;&emsp;连接成功如图，在设备管理器中可以看到此时串口驱动正常且为CON3，所以我们只需要用相关的串口调试助手获取数据即可。
+&emsp;&emsp;连接成功如图，在设备管理器中可以看到此时串口驱动正常且为COM3，所以我们只需要用相关的串口调试助手获取数据即可。
 
 - &emsp;&emsp;![WinCheckCom](ReadMe/WinCheckCom.png)
 
