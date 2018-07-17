@@ -107,7 +107,7 @@
 
 &emsp;&emsp;然后你就可以开始编程啦。
 
-&emsp;&emsp;以 Mountain Duck 为例，打开软件界面如下。
+&emsp;&emsp;以 Mountain Duck （不推荐，并不好用，毕竟免费）为例，打开软件界面如下。
 
 - &emsp;&emsp;![WinWebDavDefault](ReadMe/WinWebDavDefault.png)
 
