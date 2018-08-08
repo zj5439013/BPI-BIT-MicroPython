@@ -13,7 +13,7 @@
 
 - &emsp;&emsp;![WinCheckCom](ReadMe/WinCheckCom.png)
 
-&emsp;&emsp;现在打开本目录下提供的工具 WinComDebug.zip ，打开压缩包后直接双击打开 COMdbg.exe ，将出现如下界面，如果出现打不开的情况请更换其他类似串口调试助手。
+&emsp;&emsp;现在打开本目录下提供的工具 WinCom 文件夹，打开压缩包后直接双击打开 COMdbg.exe ，将出现如下界面，如果出现打不开的情况请更换其他类似串口调试助手。
 
 - &emsp;&emsp;![WinReadCom](ReadMe/WinReadCom.png)
 
@@ -25,7 +25,7 @@
 
 #### Linux
 
-&emsp;&emsp;会使用Linux的同学应该不需要我教了吧。我附上一些图示就好了，我推荐安装 [minicom](http://linux.softpedia.com/get/Communications/Telephony/minicom-753.shtml) 串口工具后到 [minicom 配置](https://www.cnblogs.com/wonux/p/5897127.html) 即可。
+&emsp;&emsp;会使用 Linux 的同学应该不需要我教了吧。我附上一些图示就好了，我推荐安装 [minicom](http://linux.softpedia.com/get/Communications/Telephony/minicom-753.shtml) 串口工具后到 [minicom 配置](https://www.cnblogs.com/wonux/p/5897127.html) 即可。
 
 &emsp;&emsp;打开的命令默认为 ` sudo minicom -D /dev/ttyUSB0 `，开启后效果如下图。
 
@@ -33,9 +33,9 @@
 
 #### Mac
 
-&emsp;&emsp;抱歉，这......大概是和上面的差不多的。（待购买）
+&emsp;&emsp;抱歉，这......大概是和上面的差不多的。
 
-### 2. 辅助 BitBpi 连接附近WIFI
+### 2. 辅助 BitBpi 连接附近 WIFI
 
 &emsp;&emsp;先进入该模式[SmartConfig（A键）](https://github.com/junhuanchen/BPI-BIT-MpyDevelop#smartconfiga%E9%94%AE)后等待配网。
 
@@ -47,7 +47,7 @@
 
 &emsp;&emsp;这时候我们可以从口袋里掏出手机，点上一曲普通的Disco，不是，emmm.....你应该可以下载安装并打开我提供的 Android 软件（SmartConfig.apk Or EspTouch.apk），没有安卓机？抱歉，这个，要不你从我这里拿一台去吧，用完快递回来给我就可以了。
 
-&emsp;&emsp;用我酷炫的Redmi NOTE4X打开 SmartConfig.apk 软件的截图如下，可以看到，我现在所在的 WIFI 名称，接着我要填入 WiFI 的密码。
+&emsp;&emsp;用我酷炫的 Redmi NOTE4X 打开 SmartConfig.apk 软件的截图如下，可以看到，我现在所在的 WIFI 名称，接着我要填入 WiFI 的密码。
 
 - &emsp;&emsp;![SmartConfigReady](ReadMe/SmartConfigReady.png)
 
@@ -69,21 +69,95 @@
 
 &emsp;&emsp;现在你就知道了板子的IP了，然后开始访问它吧。
 
-&emsp;&emsp;提示：你也可以通过 `http://bit.local` 的地址来达到和 IP 访问一样的结果，它需要路由支持 mDns 功能，结合你的板子的名称即可快速访问到你的板子。
+&emsp;&emsp;提示：你也可以通过 `http://bitXXXX.local` 的地址来达到和 IP 访问一样的结果，它需要路由支持 mDns 功能，结合你的板子的名称即可快速访问到你的板子，如果你不清楚，可以在板子开机后试试。
 
-&emsp;&emsp;注意：如果你是第一次使用的话，它会格式化区域并重启一次以进入系统（会输出许多信息可以忽略），最终成功连接了结果如图。（如果没有出现，请换个 WIFI 试试，因为有些 WIFI 会拒绝从而导致持续出现 `[WIFI AP+STA] Wifi STA disconnect event, reconnect!`，出现这样的情况，建议重启板子或重新配网再次尝试，最后才考虑是 WIFI 热点的问题。
+&emsp;&emsp;注意：如果你是第一次使用的话，它会格式化区域并重启一次以进入系统（会输出许多信息可以忽略），最终成功连接了结果如图。（如果没有连接成功，请换个 WIFI 试试，因为有些不兼容的 WIFI 会积极拒绝连接从而导致持续出现 `[WIFI AP+STA] Wifi STA disconnect event, reconnect!`，出现这样的情况，建议重启板子或重新配网再次尝试，最后才考虑是 WIFI 热点的路由问题。
 
 #### IOS
 
-&emsp;&emsp;等我有钱了再说吧。
+&emsp;&emsp;这是个问题......
 
 ### 3. 访问 BitBpi 编辑文件教程
 
 &emsp;&emsp;如果已经得知板子的IP，例如就在刚才我已经得到 IP: 192.168.1.14 了，就可以尝试访问板子的内部空间了。
 
-&emsp;&emsp;提示：目前板子会在上电的时候输出4个十六进制数值，比如：92C2 ，这个可以可以用来代替 IP 访问板子空间，或与他人区分板子，此时访问的地址可以是域名 `http://bit92c2.local`，从而取代 IP 地址进行访问WebDAV，方便更换的连接WIFI-AP的时候不需要再新建客户端链接配置，同时也可以和其他小伙伴一起使用不受影响。
+&emsp;&emsp;提示：目前板子会在上电的时候输出 4 个十六进制数值，比如：92C2 ，这个可以可以用来代替 IP 访问板子空间，或与他人区分板子，此时访问的地址可以是域名 `http://bit92c2.local`，从而取代 IP 地址进行访问 WebDAV ，方便更换的连接 WIFI-AP 的时候不需要再新建客户端链接配置，同时也可以和其他小伙伴一起使用不受影响。
+
+####  [Rclone](rclone.org) 
+
+- &emsp;&emsp;这是一个跨平台的磁盘映射命令行工具 [Rclone](rclone.org)，它使用起来非常的简单。
+
+- &emsp;&emsp;强烈推荐的此方式访问，以 Windows 为例，仅需编辑 WinRclone 文件夹中的两个文件即可，在操作前将目录下提供的 winfsp-x.x.xxxxx.msi 程序先安装。
+
+- &emsp;&emsp;第一个文件是板子的配置信息，第二个文件是Windows的批处理（bat）启动脚本，按如下说明设置好自己的板子信息即可。
+
+    ``` shell
+
+    [bite13d]
+    type = webdav
+    url = http://bite13d.local
+    vendor = other
+    user = 
+    pass = 
+
+    [bite13d_ip]
+    type = webdav
+    url = http://192.168.1.214
+    vendor = other
+    user = 
+    pass = 
+
+    ```
+
+    ``` shell
+
+    goto note
+
+    Windows 系统下需要安装 winfsp （已提供）
+    在同目录下的 rclone.conf 中设置如下信息
+
+    [bite13d]
+    type = webdav
+    url = http://bite13d.local
+    vendor = other
+    user = 
+    pass = 
+
+    [bite13d_ip]
+    type = webdav
+    url = http://192.168.1.214
+    vendor = other
+    user = 
+    pass = 
+
+
+    针对自己的板子只需修改 [bite13d] 和 url = http://bite13d.local ( http://192.168.X.XXX ) 的 bite13d 改成自己的板子名称或 IP 地址。
+
+    :note
+
+    rclone mount bite13d: k: --cache-dir \BpiBitTemp --vfs-cache-mode full --config rclone.conf
+
+    rclone mount bite13d_ip: k: --cache-dir \BpiBitTemp --vfs-cache-mode full --config rclone.conf
+
+    pause
+
+    ```
+
+- &emsp;&emsp;效果如图，板子将提供一个磁盘空间供用户使用，可以直接在内部编辑
+
+- ![FinishWinRclone](ReadMe/FinishWinRclone.png)
+
+- &emsp;&emsp;注意：关了控制台的话，该磁盘会直接移除，编辑器可能会提示代码已丢失（删除），但是它还存在板子内部的。
 
 #### Windows
+
+&emsp;&emsp; 以 CarotDAV 为例
+
+- &emsp;&emsp;设置界面如图
+
+- ![SetCarotDAV](ReadMe/SetCarotDAV.png)
+
+- &emsp;&emsp;它功能相对较弱，只能上传和下载文件。
 
 &emsp;&emsp;以 WebDrive 为例，打开软件界面如下。
 
@@ -107,7 +181,7 @@
 
 &emsp;&emsp;然后你就可以开始编程啦。
 
-&emsp;&emsp;以 Mountain Duck （不推荐，并不好用，毕竟免费）为例，打开软件界面如下。
+&emsp;&emsp;以 [MountainDuck](https://mountainduck.io)为例，打开软件界面如下。
 
 - &emsp;&emsp;![WinWebDavDefault](ReadMe/WinWebDavDefault.png)
 

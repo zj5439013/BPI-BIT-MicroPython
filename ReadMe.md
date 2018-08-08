@@ -42,37 +42,13 @@
 
 ##### 2. 访问 BpiBit 的存储空间
 
-&emsp;&emsp;若是未配网过的板子可以在板子启动前多按几次按键 A 后即可进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-bitbpi-连接附近wifi)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过WebDAV的形式访问它。
+&emsp;&emsp;若是未配网过的板子可以在板子启动前多按几次按键 A 后即可进入配网模式，接着到[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-bitbpi-连接附近wifi)如何帮助 BpiBit 连接到与您同处一个 WIFI 环境下的编程环境，从而通过 WebDAV 的形式访问它。
 
-&emsp;&emsp;那将通过哪些工具访问它？我们提供了以下平台的工具供用户选择访问文件。
+&emsp;&emsp;并且它支持 Windows、Linux、Android、Web Browser、Mac、IOS 等平台的访问。
 
-###### Windows
+&emsp;&emsp;假设你已经知道它的名称和地址信息了，那你就可以通过学习这章节来访问它了，请点击[访问 BitBpi 编辑文件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#3-访问-bitbpi-编辑文件教程)。
 
-- [MountainDuck](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/MountainDuck.zip)（免费试用）
-- [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.zip)（免费试用、过期收费、不是问题）
-- [Cyberduck](https://cyberduck.io/)（开源免费、不太好用）
-
-###### Linux
-
-- 在 Ubuntu 或 Lubuntu 自带的文件管理器通过`dav://192.168.1.3(BpiBit的IP地址)`的方式即可像文件夹一样访问，其他 Linux 同理。
-
-###### Android
-
-- [WebDrive](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/blob/master/Tools/WebDrive.apk)
-	
-###### Browser
-
-- [MpyOnlineEditor](https://github.com/junhuanchen/BPI-BIT-MpyOnlineEditor)
-
-###### Mac
-
-- [MountainDuck](https://mountainduck.io/)
-- [WebDrive](https://webdrive.com/download/)
-
-###### IOS
-- [WebDrive](https://itunes.apple.com/us/app/webdrive/id618167572)
-
-&emsp;&emsp;对应的工具我们也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，我们均已提供工具名称以及来源。 
+&emsp;&emsp;对应的工具也已打包存放到Tools目录，但不一定是最新的，为求最新版本的用户可以自行到对应网站去获取，均已提供工具名称以及来源。 
 
 - [访问 BitBpi 编辑文件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#3-访问-bitbpi-编辑文件教程)
 
@@ -80,14 +56,14 @@
 
 ##### 3. 可以做什么，不可以做什么？
 
-&emsp;&emsp;有些WebDAV客户端实现存在差异，当你发现有些WebDAV编辑卡死的情况，请不要担心是板子的问题，这类情况多是WebDAV协议处理不兼容，但对于我们提供的工具，是允许您直接在内部任意编辑的。
+&emsp;&emsp;有些 WebDAV 客户端实现存在差异，当你发现有些 WebDAV 编辑卡死的情况，请不要担心是板子的问题，这类情况多是 WebDAV 协议处理不兼容，但对于 Tools 提供的工具，是允许您直接在编辑的。
 
 &emsp;&emsp;在这样小小板子里，是没有关机的概念的，在访问它内部文件的过程中，请尽量不要突然重启或断电，这极其容易导致内部文件损坏或丢失甚至是无法编辑，如果遇到了这样的情况，请到 [修复固件教程](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToFlash#出现问题) 查看如何修复它即可。
 
 
-#### 3. 开始你的编程之旅吧
+#### 3. 最后开始你的编程之旅吧
 
-是时候到 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToCode) 学习编程了。
+&emsp;&emsp;是时候开始学习 [趣味编程等案例](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToCode)  了。
 
 ### 3. 特殊功能介绍*
 
@@ -95,13 +71,13 @@
 
 #### SmartConfig（A键）
 
-&emsp;&emsp;开机期间前5秒多按几次 A键 后将进入该模式，在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
+&emsp;&emsp;开机期间前 2 秒按一次 A键 后松开将进入该模式，在该模式下需通过 EspTouch 或 SmartConfig 等软件进行配网，通过配网工具即可帮助 BpiBit 板子连接 WIFI ，其中对应的 Android 版程序的软件已在 Tools 目录下提供，也可以另外在 Google Store 获取，而 IOS 版本则需要自行在 AppStore 里搜索 SmartConfig 下载获得。
 
 - 通过手机来[辅助 BitBpi 连接附近WIFI](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/Tools#2-辅助-bitbpi-连接附近wifi)后即可访问文件。
 
 #### Safe Mode（B键）
 
-&emsp;&emsp;开机期间前5秒多按几次 B键 后松开将进入该模式，再按一次即可退出该模式，当 Python 程序的 SYSTEM.PY 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
+&emsp;&emsp;开机期间前 2 秒按一次 B键 后松开将进入该模式，再按一次即可退出该模式，当 Python 程序的 system.py 写死循环后就无法执行 WebDAV 的服务了，这会导致无法访问固件空间的意外情况，因此在设计上预留了外部按键，从而允许用户通过按住 B键 保持 WebDAV 服务的运行直至松开之前都可以继续编辑代码文件。
 
 ### Q & A
 
