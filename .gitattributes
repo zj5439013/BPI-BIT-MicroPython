@@ -11,3 +11,5 @@
 *.jpg binary
 *.dxf binary
 *.mpy binary
+
+*.1 linguist-language=python;
