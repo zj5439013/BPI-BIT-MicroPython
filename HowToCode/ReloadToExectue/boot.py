@@ -35,5 +35,10 @@ def thread_index():
 	while Thread[0]:
 		pass
 	Thread[0] = True
-if __name__ == "__main__":
+
+def thread_start():
 	ThreadFileCheck = _thread.start_new_thread(thread_check, ())
+
+if __name__ == "__main__":
+	thread_start()
+	

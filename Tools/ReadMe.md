@@ -43,6 +43,8 @@
 
 &emsp;&emsp;当我们第一次使用 BpiBit 板子或想更换板子连接的 WIFI 的时候，会在串口调试助手里看到如下图的内容，有关于 SmartConfig 配置的功能，其中 smartconfig: SC_STATUS_FINDING_CHANNEL 表示 SmartConfig 正在等待配网。
 
+&emsp;&emsp;注意，当处于配网模式的时候，此时面板上的 BpiBit 中 t 上的 LED（18） 将会亮起！
+
 - &emsp;&emsp;![SmartConfigDefault](ReadMe/SmartConfigDefault.png)
 
 &emsp;&emsp;这时候我们可以从口袋里掏出手机，点上一曲普通的Disco，不是，emmm.....你应该可以下载安装并打开我提供的 Android 软件（SmartConfig.apk Or EspTouch.apk），没有安卓机？抱歉，这个，要不你从我这里拿一台去吧，用完快递回来给我就可以了。
@@ -85,11 +87,11 @@
 
 ####  [Rclone](rclone.org) 
 
-- &emsp;&emsp;这是一个跨平台的磁盘映射命令行工具 [Rclone](rclone.org)，它使用起来非常的简单。
+&emsp;&emsp;这是一个跨平台的磁盘映射命令行工具 [Rclone](rclone.org)，它使用起来非常的简单。
 
-- &emsp;&emsp;强烈推荐的此方式访问，以 Windows 为例，仅需编辑 WinRclone 文件夹中的两个文件即可，在操作前将目录下提供的 winfsp-x.x.xxxxx.msi 程序先安装。
+&emsp;&emsp;强烈推荐的此方式访问，以 Windows 为例，仅需编辑 WinRclone 文件夹中的两个文件即可，在操作前将目录下提供的 winfsp-x.x.xxxxx.msi 程序先安装。
 
-- &emsp;&emsp;第一个文件是板子的配置信息，第二个文件是Windows的批处理（bat）启动脚本，按如下说明设置好自己的板子信息即可。
+&emsp;&emsp;第一个文件是板子的配置信息，第二个文件是Windows的批处理（bat）启动脚本，按如下说明设置好自己的板子信息即可。
 
     ``` shell
 
@@ -135,29 +137,29 @@
 
     :note
 
-    rclone mount bite13d: k: --cache-dir \BpiBitTemp --vfs-cache-mode full --config rclone.conf
+    rclone mount bite13d: k: --cache-dir C:\BpiBitTemp --vfs-cache-mode full --config rclone.conf
 
-    rclone mount bite13d_ip: k: --cache-dir \BpiBitTemp --vfs-cache-mode full --config rclone.conf
+    rclone mount bite13d_ip: k: --cache-dir C:\BpiBitTemp --vfs-cache-mode full --config rclone.conf
 
     pause
 
     ```
 
-- &emsp;&emsp;效果如图，板子将提供一个磁盘空间供用户使用，可以直接在内部编辑
+&emsp;&emsp;效果如图，板子将提供一个磁盘空间供用户使用，可以直接在内部编辑
 
 - ![FinishWinRclone](ReadMe/FinishWinRclone.png)
 
-- &emsp;&emsp;注意：关了控制台的话，该磁盘会直接移除，编辑器可能会提示代码已丢失（删除），但是它还存在板子内部的。
+&emsp;&emsp;注意：关了控制台的话，该磁盘会直接移除，编辑器可能会提示代码已丢失（删除），但是它还存在板子内部的。
 
 #### Windows
 
 &emsp;&emsp; 以 CarotDAV 为例
 
-- &emsp;&emsp;设置界面如图
+&emsp;&emsp;设置界面如图
 
 - ![SetCarotDAV](ReadMe/SetCarotDAV.png)
 
-- &emsp;&emsp;它功能相对较弱，只能上传和下载文件。
+&emsp;&emsp;它功能相对较弱，只能上传和下载文件。
 
 &emsp;&emsp;以 WebDrive 为例，打开软件界面如下。
 

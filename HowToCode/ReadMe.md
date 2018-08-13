@@ -68,6 +68,8 @@ print("hello bpibit!")
       零基础学习 Python 语言编程。
    5. ###### [Esp32 中文开发文档](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
       国内翻译的 MicroPython 开发文档。
+   6. ###### [Esp32 可用示例代码](https://github.com/BigQubot/BPI-BIT-MpyExample)
+      以本板子为例，基于官方提供的用例代码修改与扩充。
 
 ##### 2. 硬件相关应用
 
@@ -79,7 +81,7 @@ print("hello bpibit!")
 
    - ###### [水滴平衡模拟器](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/tree/master/HowToCode/BalanceWaterDrop)
 
-   - ###### 如何使得两灯交错闪缩
+   - ###### 如何使得两灯交错闪烁
    - ###### 如何使用超声波测距
    - ###### 如何获取外界温度
    - ###### 如何控制开关当生物靠近时
