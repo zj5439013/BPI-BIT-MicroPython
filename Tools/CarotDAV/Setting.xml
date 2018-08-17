@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebDAVClientSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FormSize>
-    <Width>364</Width>
+    <Width>504</Width>
     <Height>300</Height>
   </FormSize>
   <ConnectionSettingListFormSize>
     <Width>0</Width>
     <Height>0</Height>
   </ConnectionSettingListFormSize>
-  <View>Details</View>
+  <View>LargeIcon</View>
   <ShowLogWindow>false</ShowLogWindow>
-  <ShowStatusBar>false</ShowStatusBar>
+  <ShowStatusBar>true</ShowStatusBar>
   <ColumnIndexs>
     <int>0</int>
     <int>1</int>
@@ -20,16 +20,16 @@
     <int>5</int>
   </ColumnIndexs>
   <ColumnWidth>
-    <int>102</int>
-    <int>138</int>
+    <int>72</int>
+    <int>66</int>
     <int>25</int>
     <int>25</int>
-    <int>25</int>
-    <int>25</int>
+    <int>120</int>
+    <int>108</int>
   </ColumnWidth>
   <AutoColumnWidth>true</AutoColumnWidth>
   <Group>None</Group>
-  <SortString />
+  <SortString>URL</SortString>
   <VersionCheckEnabled>true</VersionCheckEnabled>
   <EnableFileLogging>false</EnableFileLogging>
   <BackgroundImagePath />
@@ -40,5 +40,100 @@
   <AutoEnableDAVServer>false</AutoEnableDAVServer>
   <AutoMoundDriveLetter />
   <AutoMoundWebFolder>false</AutoMoundWebFolder>
-  <ConnectionSettings />
+  <ConnectionSettings>
+    <ConnectionSetting>
+      <DownloadFilenameNormalization>NFC</DownloadFilenameNormalization>
+      <UploadFilenameNormalization>None</UploadFilenameNormalization>
+      <Proxy>Default</Proxy>
+      <ProxyByPassLocal>false</ProxyByPassLocal>
+      <ProxyUseDefaultCredential>false</ProxyUseDefaultCredential>
+      <ReadWriteTimeout>10000</ReadWriteTimeout>
+      <ConnectTimeout>10000</ConnectTimeout>
+      <UseEncryption>false</UseEncryption>
+      <AutoSplit>false</AutoSplit>
+      <SplitSizeMB>50</SplitSizeMB>
+      <EscapeString>^_</EscapeString>
+      <HideUnencryptedFile>false</HideUnencryptedFile>
+      <HideUnencryptedDirectory>false</HideUnencryptedDirectory>
+      <Name>bit24a3.lan</Name>
+      <TargetUri>http://bit24a3.lan/</TargetUri>
+      <UserName />
+      <Password />
+      <DontSave>true</DontSave>
+      <ProxyUri />
+      <ProxyUserName />
+      <ProxyPassword />
+      <ProxyByPassList />
+      <EncryptionKey />
+      <UseDefaultCredential>true</UseDefaultCredential>
+      <ClientCertificates />
+      <UsePreAuthentication_Basic>false</UsePreAuthentication_Basic>
+      <UsePreAuthentication_WSSE>false</UsePreAuthentication_WSSE>
+      <URIRequestEncoding>UTF-8</URIRequestEncoding>
+      <URIResponseEncoding>UTF-8</URIResponseEncoding>
+      <CredentialEncoding>UTF-8</CredentialEncoding>
+      <RequestTranslatef>true</RequestTranslatef>
+      <DontExpect100>false</DontExpect100>
+      <SendEmptyPUT>false</SendEmptyPUT>
+      <DontUpdateProperty>false</DontUpdateProperty>
+      <UseFullUriInDestinationHeader>true</UseFullUriInDestinationHeader>
+      <UploadCompression>None</UploadCompression>
+      <DontVerifyContentRange>false</DontVerifyContentRange>
+      <RedirectionCollectionOnly>false</RedirectionCollectionOnly>
+      <RemoveLastSlashOnMKCOL>true</RemoveLastSlashOnMKCOL>
+      <DisableUploadResume>true</DisableUploadResume>
+      <DontRequestGzip>false</DontRequestGzip>
+      <DontRequestDeflate>false</DontRequestDeflate>
+      <DontRequestBrotli>false</DontRequestBrotli>
+      <AuthModules>Basic,Digest,NTLM,Kerberos,Negotiate,WSSE,Passport</AuthModules>
+      <DisableTlsVersions />
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <DownloadFilenameNormalization>NFC</DownloadFilenameNormalization>
+      <UploadFilenameNormalization>None</UploadFilenameNormalization>
+      <Proxy>Default</Proxy>
+      <ProxyByPassLocal>false</ProxyByPassLocal>
+      <ProxyUseDefaultCredential>false</ProxyUseDefaultCredential>
+      <ReadWriteTimeout>10000</ReadWriteTimeout>
+      <ConnectTimeout>10000</ConnectTimeout>
+      <UseEncryption>false</UseEncryption>
+      <AutoSplit>false</AutoSplit>
+      <SplitSizeMB>50</SplitSizeMB>
+      <EscapeString>^_</EscapeString>
+      <HideUnencryptedFile>false</HideUnencryptedFile>
+      <HideUnencryptedDirectory>false</HideUnencryptedDirectory>
+      <Name>bitbd3c</Name>
+      <TargetUri>http://bitbd3c.lan/</TargetUri>
+      <UserName />
+      <Password />
+      <DontSave>true</DontSave>
+      <ProxyUri />
+      <ProxyUserName />
+      <ProxyPassword />
+      <ProxyByPassList />
+      <EncryptionKey />
+      <UseDefaultCredential>false</UseDefaultCredential>
+      <ClientCertificates />
+      <UsePreAuthentication_Basic>false</UsePreAuthentication_Basic>
+      <UsePreAuthentication_WSSE>false</UsePreAuthentication_WSSE>
+      <URIRequestEncoding>UTF-8</URIRequestEncoding>
+      <URIResponseEncoding>UTF-8</URIResponseEncoding>
+      <CredentialEncoding>UTF-8</CredentialEncoding>
+      <RequestTranslatef>true</RequestTranslatef>
+      <DontExpect100>false</DontExpect100>
+      <SendEmptyPUT>false</SendEmptyPUT>
+      <DontUpdateProperty>false</DontUpdateProperty>
+      <UseFullUriInDestinationHeader>true</UseFullUriInDestinationHeader>
+      <UploadCompression>None</UploadCompression>
+      <DontVerifyContentRange>false</DontVerifyContentRange>
+      <RedirectionCollectionOnly>false</RedirectionCollectionOnly>
+      <RemoveLastSlashOnMKCOL>true</RemoveLastSlashOnMKCOL>
+      <DisableUploadResume>true</DisableUploadResume>
+      <DontRequestGzip>false</DontRequestGzip>
+      <DontRequestDeflate>false</DontRequestDeflate>
+      <DontRequestBrotli>false</DontRequestBrotli>
+      <AuthModules>Basic,Digest,NTLM,Kerberos,Negotiate,WSSE,Passport</AuthModules>
+      <DisableTlsVersions />
+    </ConnectionSetting>
+  </ConnectionSettings>
 </WebDAVClientSetting>

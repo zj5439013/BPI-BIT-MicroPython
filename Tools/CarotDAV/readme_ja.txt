@@ -1,5 +1,5 @@
 
-WebDAV Client CarotDAV Ver. 1.15.4
+WebDAV Client CarotDAV Ver. 1.15.5
 
 概要
 	Windows用のWebDAVクライアントです。
