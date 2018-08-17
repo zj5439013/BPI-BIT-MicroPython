@@ -1,6 +1,6 @@
 import utime
 from random import randint
-from Graph import BpiBitNeoPixel, NeoPixelPower
+from display import BpiBitNeoPixel, NeoPixelPower
 NeoPixelPower(True)
 View = BpiBitNeoPixel()
 
