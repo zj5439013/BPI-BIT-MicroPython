@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from Queue import PriorityQueue
+from queue import PriorityQueue
 
 from display import BpiBitNeoPixel, NeoPixelPower
 
