@@ -6,7 +6,7 @@ LED = machine.PWM(machine.Pin(18), freq=50)
 
 # led's intensity is controlled by the potentiometer's value
 
-while Thread[0]:
+while True:
 	# dividing by 16 since .read() gives a 12bit value
 	# but .intensity() needs a 8bit value 
 	# ensuring pot_value is an integer

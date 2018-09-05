@@ -1,6 +1,6 @@
 import dht,time,machine
 dht = dht.DHT11(machine.Pin(13))
-while Thread[0]:
+while True:
 	dht.measure()
 	print("temperature:",dht.temperature())
 	print("humidity:",dht.humidity())				#DHT22 can be read twice every second

@@ -1,7 +1,7 @@
 import machine,time
 LED = machine.PWM(machine.Pin(18), freq=1000)
 tick = 0 # counter variable
-while Thread[0]:
+while True:
 	if tick < 40:
 		# self.tick % 20 gives a number 0 to 19
         # subtracting 9 makes it -9 to 10

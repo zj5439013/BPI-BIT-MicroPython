@@ -146,7 +146,7 @@ def readSerialPort():
 
 resetPins()
 
-while Thread[0]: # Replace while True:
+while True:
     readSerialPort()
     if (utime.ticks_ms() - timerCheckUpdate >= 250):
         sendUpdateServomotors()

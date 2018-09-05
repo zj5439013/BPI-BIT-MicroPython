@@ -7,7 +7,7 @@ LED = machine.PWM(machine.Pin(18), freq=1000)
 
 # led's intensity is controlled by the Pin18's value
 
-while Thread[0]:
+while True:
 	# dividing by 4 since .read() is from 0 to 4095
 	# but .intensity() is from 0 to 1024
 	# ensuring pot_value is an integer

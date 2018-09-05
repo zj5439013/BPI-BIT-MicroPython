@@ -18,6 +18,6 @@ def checkdist():
 	t2=time.ticks_us()
 	t3=time.ticks_diff(t2,t1)/10000
 	return t3*340/2
-while Thread[0]:
+while True:
 		print("Distance:%0.2f cm" %checkdist())
 		time.sleep(0.5)

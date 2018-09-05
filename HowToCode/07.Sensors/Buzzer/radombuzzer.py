@@ -5,7 +5,7 @@ from random import *
 #pwm16 = machine.PWM(p16)
 a = 25
 buzzer = machine.PWM(machine.Pin(25), duty=512)
-while Thread[0]:
+while True:
 	i = randint(25, 7812)         #generates a random number form 25 to 7812
             #set buzzer's tone immediately to random_tone
 	buzzer.freq(i)

@@ -5,7 +5,7 @@ import time
 	
 array = [262, 286, 311, 349, 392, 440, 494, 523, 587, 659, 698, 784, 880, 987, 1046, 1174, 1318, 1396, 1567, 1760, 1975]
 	
-while Thread[0]:
+while True:
 
 	Pwm = PWM(Pin(25)) # create PWM object from a pin
 	
@@ -57,7 +57,7 @@ while Thread[0]:
 	# Setup the Neopixel strip on pin0 with a length of 8 pixels
 	np = neopixel.NeoPixel(Pin(4), 25)
 
-	while Thread[0]:
+	while True:
 
 		value = 0
 		for b in range(0, 51):

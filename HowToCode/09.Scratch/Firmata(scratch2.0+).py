@@ -334,7 +334,7 @@ firmata.reportFirmwareCallback(0, 0, None)
 firmata.sysexCallback(CAPABILITY_QUERY)
 firmata.sysexCallback(ANALOG_MAPPING_QUERY)
 
-while Thread[0]: # Replace while True:
+while True:
 	if (utime.ticks_ms() - timerCheckUpdate >= 1):
 		for i in range(len(Adcs)):
 			firmata.reportAnalogCallback(i, 128)

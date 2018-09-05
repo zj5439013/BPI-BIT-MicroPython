@@ -32,7 +32,7 @@ def thread_index():
 		exec(code, {'Thread' : Thread})
 	except Exception as e:
 		sys.print_exception(e)
-	while Thread[0]:
+	while True:
 		pass
 	Thread[0] = True
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ rtc.datetime((start_year, start_month, start_day, start_weekday, start_hours, st
 # weekday in datetime() understands Monday as 1 and Sunday as 7
 days_of_the_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ]
 
-while Thread[0]:
+while True:
 	# clock.datetime() returns an 8-tuple
 	clock_t = rtc.datetime()
 	'''

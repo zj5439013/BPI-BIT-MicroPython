@@ -5,7 +5,7 @@ from machine import Pin
 # You can adjust the “4” (pin number) and the “25” (number of pixel) to suit your set up.
 sw = Pin(35, Pin.IN)
 np = NeoPixel(machine.Pin(4), 25)
-while Thread[0]:
+while True:
 	while 0 == sw.value():
 		np[0] = (255, 0, 0)               #set the colour of the first pixels
 		np[1] = (255, 255, 255)             #set the colour of the second pixels

@@ -9,7 +9,7 @@ from display import BpiBitNeoPixel, NeoPixelPower
 NeoPixelPower(True)
 View = BpiBitNeoPixel()
 X, Y, Color, Flag = 2, 2, 2, 0
-while Thread[0]:
+while True:
 	# print('acceleration:', sensor.acceleration)
 	# print('gyro:', sensor.gyro)
 	# print('magnetic:', sensor.magnetic)

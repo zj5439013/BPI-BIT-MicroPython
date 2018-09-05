@@ -4,7 +4,7 @@ sw = Pin(35, Pin.IN)
 LED = Pin(18, Pin.OUT)# configuring 18 to Push/Pull output
 
 # LED is on only when the  button is pressed down
-while Thread[0]:
+while True:
 	if sw.value() == True:
 		LED.value(0)
 	else:

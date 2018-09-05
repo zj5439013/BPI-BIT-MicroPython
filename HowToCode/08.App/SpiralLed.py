@@ -13,7 +13,7 @@ def Draw(x, y):
 
 r, g, b, br = 1, 1, 1, 1
 
-while Thread[0]: # Replace while True:
+while True:
 
 	RGB = (r * br, g * br, b * br)
 	
