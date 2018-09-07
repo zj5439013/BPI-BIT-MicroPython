@@ -14,8 +14,8 @@ def Draw(x, y):
 r, g, b, br = 1, 1, 1, 1
 
 while True:
-
 	RGB = (r * br, g * br, b * br)
+	print('RGB:' + str(RGB))
 	
 	br = br + 5
 	
