@@ -22,6 +22,8 @@ from esptool import main
 
 import sys
 
+bak = sys.argv
+
 sys.argv = [
 	'AutoFlash.py', '--chip', 'esp32', 
 	'--port', serialName, 
@@ -29,7 +31,19 @@ sys.argv = [
 	'erase_flash'
 ]
 
-# print sys.argv
+try:
+    pos = bak.index('--port')
+    if pos is not False:
+        sys.argv[4] = bak[pos + 1]
+except ValueError:
+	pass
+
+try:
+    pos = bak.index('--baud')
+    if pos is not False:
+        sys.argv[6] = bak[pos + 1]
+except ValueError:
+	pass
 
 main()
 

@@ -23,6 +23,8 @@ from esptool import main
 
 import sys
 
+bak = sys.argv
+
 sys.argv = [
 	'AutoFlash.py', '--chip', 'esp32', 
 	'--port', serialName, 
@@ -34,7 +36,21 @@ sys.argv = [
 	FLASH_START, 'firmware.bin'
 ]
 
-# print sys.argv
+try:
+	pos = bak.index('--port')
+	if pos is not False:
+		sys.argv[4] = bak[pos + 1]
+except ValueError:
+	pass
+
+try:
+	pos = bak.index('--baud')
+	if pos is not False:
+		sys.argv[6] = bak[pos + 1]
+except ValueError:
+	pass
+
+# print(sys.argv)
 
 main()
 
