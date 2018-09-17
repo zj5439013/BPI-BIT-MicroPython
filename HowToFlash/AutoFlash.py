@@ -28,7 +28,7 @@ bak = sys.argv
 sys.argv = [
 	'AutoFlash.py', '--chip', 'esp32', 
 	'--port', serialName, 
-	'--baud', '921600',
+	'--baud', '460800', # 921600
 	'write_flash', '-z',
 	'--flash_mode', FLASH_MODE, 
 	'--flash_size', '4MB',

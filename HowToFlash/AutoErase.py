@@ -27,7 +27,7 @@ bak = sys.argv
 sys.argv = [
 	'AutoFlash.py', '--chip', 'esp32', 
 	'--port', serialName, 
-	'--baud', '921600', 
+	'--baud', '460800', # 921600
 	'erase_flash'
 ]
 
