@@ -1,5 +1,5 @@
 from utime import sleep
-from machine import Pin ,ADC
+from machine import Pin, ADC
 
 class input_output():
 
