@@ -1,4 +1,4 @@
-from input_output import input_output
+from gpio import input_output
 
 pin0=input_output(25)
 pin1=input_output(32)
