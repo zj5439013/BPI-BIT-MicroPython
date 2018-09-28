@@ -1,4 +1,4 @@
-# BPI-Bit-Python
+# BPI-Bit-Python [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](./LICENSE)
 Provide many interesting micro python code for bpi:bit
 
 Now You Can To [Wiki](https://github.com/junhuanchen/BPI-BIT-MpyDevelop/wiki) start your coding.XD
