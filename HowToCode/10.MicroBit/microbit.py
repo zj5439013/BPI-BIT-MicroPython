@@ -1,18 +1,4 @@
-from utime import sleep
-from machine import Pin, ADC
-
-class input_output():
-
-	def __init__(self, pin):
-		self.pin = pin
-
-	def write_digital(self, v):
-		pinx = Pin(self.pin, Pin.OUT).value(v)
-
-	def is_touched(self):
-		adc = ADC(Pin(self.num, Pin.IN))
-		adc.atten(ADC.ATTN_0DB)
-		return adc.read() == 4095
+from input_output import input_output
 
 pin0=input_output(25)
 pin1=input_output(32)
@@ -33,3 +19,4 @@ pin15=input_output(23)
 pin16=input_output(5)
 pin19=input_output(22)
 pin20=input_output(21)
+
