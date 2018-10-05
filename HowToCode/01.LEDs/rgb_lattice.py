@@ -1,7 +1,8 @@
-from display import BpiBitNeoPixel, NeoPixelPower
-NeoPixelPower(True)
-View = BpiBitNeoPixel()
+from display import Pixel, PixelPower
+PixelPower(True)
+View = Pixel()
 
 RGB = (10, 10, 10)
-View.LoadXY(2, 2, RGB)
+View.LoadXY(1, 1, RGB)
+View.LoadPos(24, RGB)
 View.Show()
